@@ -9,11 +9,6 @@ import org.junit.Assert;
 import pages.CartPage;
 import pages.LandingPage;
 
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 public class CartSteps {
     private final CartPage cartPage = new CartPage();
     private final LandingPage landingPage = new LandingPage();
@@ -40,25 +35,6 @@ public class CartSteps {
             Assert.assertTrue("Cart page should be displayed successfully", true);
         } catch (Exception e) {
             Assert.fail("Failed to verify Cart page: " + e.getMessage());
-        }
-    }
-
-    // Helper class for credentials
-    private static class Credentials {
-        public String username = "";
-        public String password = "";
-        public boolean rememberMe = false;
-    }
-
-    // Helper method to read credentials from JSON
-    private Credentials readCredentialsFromJson(String fileName) {
-        Path path = Paths.get("src", "test", "resources", "testData", fileName);
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            return mapper.readValue(path.toFile(), Credentials.class);
-        } catch (IOException e) {
-            System.err.println("Failed to read credentials from " + fileName + ": " + e.getMessage());
-            return new Credentials();
         }
     }
 }
