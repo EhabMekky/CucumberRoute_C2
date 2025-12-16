@@ -37,13 +37,11 @@ public class LandingPage {
 
     public void enterUsername(String username) {
         WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(USERNAME_INPUT));
-        el.clear();
         el.sendKeys(username);
     }
 
     public void enterPassword(String password) {
         WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_INPUT));
-        el.clear();
         el.sendKeys(password);
     }
 
