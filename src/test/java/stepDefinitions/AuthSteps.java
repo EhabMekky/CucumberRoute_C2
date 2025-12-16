@@ -8,15 +8,12 @@ import io.cucumber.java.en.Then;
 import pages.LandingPage;
 import utils.DriverManager;
 import org.junit.Assert;
-
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class ShoppingSteps {
+
+public class AuthSteps {
 
     private final LandingPage landingPage = new LandingPage();
 
