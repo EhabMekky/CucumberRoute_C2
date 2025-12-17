@@ -20,6 +20,7 @@ public class CartPage {
     private static final By CART_TITLE = By.xpath("//h1[contains(text(), 'Cart')]");
 
     public CartPage clickCartIcon() {
+        wait.until(d -> d.findElement(CART_ICON).isDisplayed());
         driver.findElement(CART_ICON).click();
         return this;
     }

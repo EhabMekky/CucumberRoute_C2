@@ -2,6 +2,7 @@
   "URL": "https://bitheap.tech/",
   "validUser": {
     "username": "test@alpha.com",
-    "password": "Test@1234"
+    "password": "Test@1234",
+    "rememberMe": false
   }
 }

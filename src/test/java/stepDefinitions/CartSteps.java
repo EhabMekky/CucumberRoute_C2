@@ -1,23 +1,12 @@
 package stepDefinitions;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.CartPage;
-import pages.LandingPage;
 
 public class CartSteps {
     private final CartPage cartPage = new CartPage();
-    private final LandingPage landingPage = new LandingPage();
-
-    @Given("I am logged in")
-    public void i_am_logged_in()
-    {
-        landingPage.waitForWelcomeText();
-    }
 
     @When("I click on the Cart button")
     public void i_click_on_the_cart_button() {

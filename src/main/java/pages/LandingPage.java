@@ -21,6 +21,8 @@ public class LandingPage {
     private static final By REMEMBER_CHECK = By.name("xoo-el-rememberme");
     private static final By SUBMIT_BUTTON = By.cssSelector("button.xoo-el-login-btn");
     private static final By WELCOME_TEXT = By.xpath("//h2[text()='Welcome to bitheap']");
+    private static final By LOGIN_MODAL = By.cssSelector("div.xoo-el-modal");
+
 
     public LandingPage() {
         this.driver = DriverManager.getDriver();
@@ -66,6 +68,7 @@ public class LandingPage {
 
     public boolean waitForWelcomeText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(WELCOME_TEXT));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(LOGIN_MODAL));
         return true;
     }
 }
